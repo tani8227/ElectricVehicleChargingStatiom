@@ -3,11 +3,9 @@ import dotenv from 'dotenv';
 dotenv.config(); 
 
 
-// Replace 'YOUR_API_KEY' with the API key you got from PositionStack
-
 
 async function getcordinates(address) {
-    const url = `http://api.positionstack.com/v1/forward?access_key=${process.env.PositionStack_api}&query=${encodeURIComponent(address)}`;
+    const url = `http://api.positionstack.com/v1/forward?access_key=${process.env.POSITION_STACK_API}&query=${encodeURIComponent(address)}`;
 
     try {
         const response = await axios.get(url);
