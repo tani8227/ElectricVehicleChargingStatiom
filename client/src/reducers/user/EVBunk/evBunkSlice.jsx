@@ -7,6 +7,8 @@ import { createEVBunkSlot } from "./EVBunkThunks/createEVBunkSlotThunk"
 import { getNearByEVBunkList } from "./EVBunkThunks/getNearByEVBunkListThunk"
 import { getEVBunkSlot } from "./EVBunkSlots/getEVBunkSlot";
 import { bookEVBunkSlot } from "./EVBunkSlots/bookEVBunkSlotThunk";
+import { getEVBunkWithSlot } from "./EVBunkSlots/getEVBunkWithSlot";
+
 
 const initialState =
 {
@@ -15,6 +17,7 @@ const initialState =
         EVSlot: null,
         NearByEVBunkList: null,
         bookedEVSlot:null,
+        EVBunkWithSlot:null,
 
 }
 
@@ -142,6 +145,19 @@ const EVBunkSlice = createSlice(
                                         .addCase(bookEVBunkSlot.rejected, (state, action) => {
                                                 state.loading = false,
                                                 state.EVSlot = action.payload
+                                        })
+                                builder
+                                        .addCase(getEVBunkWithSlot.pending, (state) => {
+                                                state.loading = true,
+                                                state.error = null
+                                        })
+                                        .addCase(getEVBunkWithSlot.fulfilled, (state,action) => {
+                                                state.loading = false,
+                                                state.EVBunkWithSlot = action.payload.data
+                                        })
+                                        .addCase(getEVBunkWithSlot.rejected, (state, action) => {
+                                                state.loading = false,
+                                                state.EVBunkWithSlot = action.payload
                                         })
 
                 }

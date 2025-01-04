@@ -15,11 +15,11 @@ async function getcordinates(address) {
             return [longitude, latitude]; // return coordinates
         } else {
             console.log('No results found for this address');
-            return []; // No results found
+            return []; 
         }
     } catch (error) {
         console.error('Error fetching coordinates:', error.message || error);
-        return []; // Return empty array in case of error
+        return []; 
     }
 }
 

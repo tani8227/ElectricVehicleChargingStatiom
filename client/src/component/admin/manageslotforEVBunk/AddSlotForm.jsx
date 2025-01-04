@@ -6,7 +6,6 @@ import Grid from '@mui/material/Grid';
 import { FormControl, TextField, Button, Typography, Checkbox, MenuItem, ListItemText, Select, OutlinedInput, InputLabel } from '@mui/material';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../../../reducers/user/Auth/authThunks/loginThunk.jsx';
 import { getUser } from '../../../reducers/user/Auth/authThunks/getUserThunk.jsx';
 import { getEVBunk } from '../../../reducers/user/EVBunk/EVBunkThunks/getOneEVBunkThunk.jsx';
 import { createEVBunkSlot } from '../../../reducers/user/EVBunk/EVBunkThunks/createEVBunkSlotThunk.jsx';

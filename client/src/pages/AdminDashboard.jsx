@@ -157,21 +157,9 @@ export default function Dashboard() {
                   </ListItemButton>
                 </List>
                 <List component="div" disablePadding>
-                  <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary=" Delete EV Bunk Location" />
-                  </ListItemButton>
+                 
                 </List>
-                <List component="div" disablePadding>
-                  <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary=" Edit EV Bunk Location" />
-                  </ListItemButton>
-                </List>
+               
               </Collapse>
 
 

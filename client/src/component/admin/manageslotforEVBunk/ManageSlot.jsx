@@ -172,6 +172,9 @@ export default function AddSlot() {
                                         <Link to={`/admin/dashboard/addslot/${item._id}`}>
                                     <AddCircleRoundedIcon sx={{ color: "blue" }} />
                                         </Link>
+                                        <Link to={`/admin/dashboard/view-slot/${item._id}`}>
+                                    <UpdateIcon sx={{ color: "blue" }} />
+                                        </Link>
                                 </Box>
 
                             </Box>

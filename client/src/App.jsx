@@ -3,7 +3,7 @@ import Home from './pages/Home.jsx'
 import Navbar from './component/navbar/Navbar.jsx'
 import UserSignUp from './component/user/SignUp.jsx'
 import UserSignIn from './component/user/SignIn.jsx'
-
+import ViewSlot from './component/admin/manageslotforEVBunk/ViewSlot.jsx'
 import AdmminDashboard from './pages/AdminDashboard.jsx'
 import AdminSignUp from './component/admin/SignUp.jsx'
 import AdminSignIn from "./component/admin/SignIn.jsx"
@@ -21,18 +21,6 @@ function App() {
   
   
   const param= useParams();
-  
-  
-  
-
-
-
-
-
-
-
-
-
 
   const router = createBrowserRouter([
     {  
@@ -63,11 +51,7 @@ function App() {
             },
           
             
-          ],
-
-          
-          
-          
+          ],      
          },
          
       ]
@@ -144,6 +128,10 @@ function App() {
               {
                 path:'addslot/:id',
                 element:<AddSlotPage/>
+              },
+              {
+                path:"view-slot/:id",
+                element:<ViewSlot/>
               }
              
              

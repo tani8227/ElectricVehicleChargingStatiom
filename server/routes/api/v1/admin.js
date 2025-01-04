@@ -14,6 +14,7 @@ adminRouter.delete('/deleteEVBunk/:id',passport.authenticate('jwt', {session:fal
 adminRouter.get('/getEVBunkList',passport.authenticate('jwt', {session:false}), evBunkController.getBunkList);
 adminRouter.get('/getEVBunk/:id',passport.authenticate('jwt', {session:false}), evBunkController.getEVBunk);
 adminRouter.post('/createEVBunkSlot',passport.authenticate('jwt', {session:false}), evBunkSlotController.createEVBunkSlot);
+adminRouter.get('/getEVBunkWithSlot/:id',passport.authenticate('jwt', {session:false}), evBunkSlotController.getEVBunkWithSlot);
 
 
 
